@@ -9,8 +9,8 @@
 /* si tu veux agrandir/réduire globalement : modifie seulement width ici */
 
 .garden {
-  width: 300px;       /* largeur = hauteur */
-  height: 300px; 
+  width: 220px;       /* largeur = hauteur */
+  height: 220px; 
   position: relative;
   background-color: rgb(152,243,235);
   overflow: hidden;
