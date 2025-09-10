@@ -2,60 +2,133 @@ const btn = document.querySelector(".btn");
 const add1 = document.querySelector(".container2");
 const add2 = document.querySelector(".container3");
 
-const quotesLove = [
+const quotesAudiard = [
   {
-    author: "Winston Churchill",
-    citation: "Le succès n’est pas final, l’échec n’est pas fatal : c’est le courage de continuer qui compte.",
+    film: "Les Tontons flingueurs",
+    citation: "Les cons, ça ose tout. C’est même à ça qu’on les reconnaît.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Eleanor Roosevelt",
-    citation: "L’avenir appartient à ceux qui croient à la beauté de leurs rêves.",
+    film: "Les Tontons flingueurs",
+    citation: "Faut pas parler aux cons, ça les instruit.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Confucius",
-    citation: "Peu importe la lenteur avec laquelle tu avances, tant que tu ne t’arrêtes pas.",
+    film: "Les Tontons flingueurs",
+    citation: "Un intellectuel assis va moins loin qu’un con qui marche.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Theodore Roosevelt",
-    citation: "Crois que tu peux le faire et tu as déjà parcouru la moitié du chemin.",
+    film: "Les Tontons flingueurs",
+    citation: "Moi, les dingues, j’les soigne. Mais toi, tu es pas dingue, t’es con.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Thomas Edison",
-    citation: "Notre plus grande faiblesse réside dans l’abandon. La façon la plus sûre de réussir est toujours d’essayer encore une fois.",
+    film: "Les Tontons flingueurs",
+    citation: "On n’ouvre pas une armoire normande avec un coupe-ongles.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Maya Angelou",
-    citation: "Tu ne peux pas contrôler tous les événements qui t’arrivent, mais tu peux décider de ne pas être diminué par eux.",
+    film: "Les Tontons flingueurs",
+    citation: "Les traditions, y a que ça de vrai.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
   {
-    author: "Steve Jobs",
-    citation: "La seule façon de faire du bon travail est d’aimer ce que tu fais.",
+    film: "Un singe en hiver",
+    citation: "Heureux soient les fêlés, car ils laisseront passer la lumière.",
+    date: "1962",
+    realisateur: "Henri Verneuil",
   },
   {
-    author: "Helen Keller",
-    citation: "Seuls, nous pouvons si peu ; ensemble, nous pouvons tant.",
+    film: "Un singe en hiver",
+    citation: "Quand on parle pognon, à partir d’un certain chiffre, tout le monde écoute.",
+    date: "1962",
+    realisateur: "Henri Verneuil",
   },
   {
-    author: "Nelson Mandela",
-    citation: "Cela semble toujours impossible jusqu’à ce que ce soit fait.",
+    film: "Le cave se rebiffe",
+    citation: "Deux intellectuels assis vont moins loin qu’une brute qui marche.",
+    date: "1961",
+    realisateur: "Gilles Grangier",
   },
   {
-    author: "Albert Einstein",
-    citation: "Au milieu de chaque difficulté se trouve une opportunité.",
+    film: "Le cave se rebiffe",
+    citation: "Si la connerie se mesurait, il servirait de mètre étalon.",
+    date: "1961",
+    realisateur: "Gilles Grangier",
   },
   {
-    author: "Mark Twain",
-    citation: "Le secret pour aller de l’avant, c’est de commencer.",
+    film: "Le cave se rebiffe",
+    citation: "Les conneries, c’est comme les impôts, on finit toujours par les payer.",
+    date: "1961",
+    realisateur: "Gilles Grangier",
   },
   {
-    author: "Ralph Waldo Emerson",
-    citation: "Ce qui est derrière nous et ce qui est devant nous sont peu de choses comparé à ce qui est en nous.",
+    film: "Le Pacha",
+    citation: "Quand les types de 130 kilos disent certaines choses, les types de 60 kilos les écoutent.",
+    date: "1968",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Le Pacha",
+    citation: "Un barbu, c’est un barbu. Trois barbus, c’est des barbouzes.",
+    date: "1968",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Les Barbouzes",
+    citation: "Dans la vie, on partage toujours les emmerdes, jamais le pognon.",
+    date: "1964",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Les Barbouzes",
+    citation: "Y a pas de grands, y a pas de petits. La bonne longueur pour les jambes, c’est quand les pieds touchent par terre.",
+    date: "1964",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Les Barbouzes",
+    citation: "L’avantage avec les étrangers, c’est qu’ils sont pas du coin.",
+    date: "1964",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Ne nous fâchons pas",
+    citation: "Les conneries, c’est comme les impôts, on finit toujours par les payer.",
+    date: "1966",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Ne nous fâchons pas",
+    citation: "Si on bricolait plus souvent, on aurait moins la tête aux bêtises.",
+    date: "1966",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Ne nous fâchons pas",
+    citation: "Il vaut mieux s’en aller la tête basse que les pieds devant.",
+    date: "1966",
+    realisateur: "Georges Lautner",
+  },
+  {
+    film: "Les Tontons flingueurs",
+    citation: "C’est curieux chez les marins ce besoin de faire des phrases.",
+    date: "1963",
+    realisateur: "Georges Lautner",
   },
 ];
 
 
+
 function randomIndex() {
-  return Math.floor(Math.random() * quotesLove.length);
+  return Math.floor(Math.random() * quotesAudiard.length);
 }
 
 btn.addEventListener(
@@ -66,12 +139,11 @@ btn.addEventListener(
 
     // 2) une seule sélection aléatoire pour citation+auteur
     const i = randomIndex();
-    add1.textContent = quotesLove[i].citation;
-    add2.textContent = quotesLove[i].author;
+    add1.textContent = quotesAudiard[i].citation;
+    add2.textContent = add2.textContent = `${quotesAudiard[i].film} · ${quotesAudiard[i].realisateur} · ${quotesAudiard[i].date}`;
 
     // 3) afficher
     add1.style.display = "block";
     add2.style.display = "block";
-  },
-  { once: true }
-); // <-- empêche un 2e changement
+  }
+); 
